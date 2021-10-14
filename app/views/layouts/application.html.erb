@@ -12,11 +12,14 @@
 
   <body class="app">
     
-     <div id="sidebar">
-      <ul>
-        <li>
-          <a href="/">home</a>
-        </li>
+
+  <div id="sidebar">
+<div class="header">
+<a href="/"><h2>PETSHOP-S</h2></a>
+</div>
+
+ <ul>
+      
         <li>
           <a href="clients">clients</a>
         </li>
@@ -29,6 +32,18 @@
 </div>
 
   <div id="navbar">
+
+<% if user_signed_in? %>
+<div class="dropdown">
+<a class="dropbtn"> <% current_user.email%> </a>
+<div class="dropdown-content">
+  <%= link_to "sair", destroy_user_session_path, method: :delete %>
+  </div>
+  </div>
+<%  else %>
+  <%= link_to "entrar", new_user_session_path %>
+<% end %>  
+
 
 </div>
 

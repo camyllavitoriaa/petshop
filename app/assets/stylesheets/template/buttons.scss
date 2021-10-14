@@ -1,0 +1,42 @@
+.button {
+    display: inline-block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: white;
+    color: black!important;
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1),
+                0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+.button-success {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.button-primary {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.button-info {
+    background-color: skyblue;
+    color: white;
+}
+
+.button-danger {
+    background-color: red;
+    color: white;
+}
+
+.button-dark {
+    background-color: black;
+    color: white;
+}
+.button:visited{
+    color: white;
+}

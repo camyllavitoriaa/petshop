@@ -14,44 +14,43 @@
     
 
   <div id="sidebar">
-<div class="header">
-<a href="/"><h2>PETSHOP-S</h2></a>
-</div>
+    <div class="header">
+      <a href="/"><h2>PETSHOP-S</h2></a>
+    </div>
 
- <ul>
+    <ul>
       
         <li>
-          <a href="clients">clients</a>
+          <a href="/clients">clients</a>
         </li>
         <li>
-          <a href="pets">pets</a>
+          <a href="/pets">pets</a>
         </li>
     
-      </ul>
+    </ul>
 
-</div>
+  </div>
 
   <div id="navbar">
 
-<% if user_signed_in? %>
-<div class="dropdown">
-<a class="dropbtn"> <% current_user.email%> </a>
-<div class="dropdown-content">
-  <%= link_to "sair", destroy_user_session_path, method: :delete %>
-  </div>
-  </div>
-<%  else %>
-  <%= link_to "entrar", new_user_session_path %>
-<% end %>  
+    <% if user_signed_in? %>
+      <div class="dropdown">
+        <a class="dropbtn"> <%= current_user.email%> </a>
+        <div class="dropdown-content">
+          <%= link_to "sair", destroy_user_session_path, method: :delete %>
+        </div>
+      </div>
+    <%  else %>
+      <%= link_to "entrar", new_user_session_path %>
+    <% end %>
 
-
-</div>
+  </div>
 
   <div id="content">
     <div class="card">
       <%= yield %>
+    </div>
   </div>
-</div>
 
   </body>
 </html>
